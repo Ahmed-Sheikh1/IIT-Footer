@@ -41,15 +41,30 @@
 .iconImg {
   width: 60px;
   height: 60px;
-  background-color: #7443FF;
+  background-color: #7443ff;
   padding: 13px;
   border-radius: 50%;
 }
 .serviceHeading {
   color: #e29ae3;
 }
-.form {
+.form input[type="email"] {
   background-color: #000000;
+  color: #ffffff;
+  border: none;
+  box-shadow: none;
+  border-bottom: 1px solid white ;
+}
+.form input[type="email"]::placeholder {
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+}
+.form input[type="email"]:focus {
+  border: rgb(255, 255, 255);
+  box-shadow: none;
+  border-bottom: 1px white solid;
 }
 .ul {
   background-color: #000000;
@@ -108,6 +123,10 @@ a::after {
 @media (max-width: 778px) {
   .footer {
     padding: 40px;
+  }
+  .heading {
+    font-size: 30px;
+    line-height: 41px;
   }
 }
 @media (max-width: 480px) {

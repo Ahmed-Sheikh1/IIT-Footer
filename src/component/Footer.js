@@ -118,10 +118,10 @@ const Footer = () => {
             </ListGroup>
           </Col>
         </Row>
-        <Row className="mt-5 gx-5">
+        <Row className="mt-3 gx-5 gy-5">
           <Col
-            className="d-flex justify-content-center align-items-center"
-            sm={4}
+            className="d-flex justify-content-center align-items-start"
+            sm={6}
             lg={4}
           >
             <img
@@ -133,7 +133,7 @@ const Footer = () => {
           </Col>
           <Col
             className="d-flex justify-content-center align-items-center"
-            sm={4}
+            sm={6}
             lg={4}
           >
             <img
@@ -141,11 +141,11 @@ const Footer = () => {
               src="/assets/phone.svg"
               alt="insource-info-icon"
             ></img>
-            <p className={styles.iconPara}>dummy@example.com</p>
+            <p className={styles.iconPara}>{`+1 (234) 5569 321`}</p>
           </Col>
           <Col
             className="d-flex justify-content-center align-items-center"
-            sm={4}
+            sm={6}
             lg={4}
           >
             <img
@@ -153,7 +153,7 @@ const Footer = () => {
               src="/assets/location.svg"
               alt="insource-info-icon"
             ></img>
-            <p className={styles.iconPara}>dummy@M</p>
+            <p className={styles.iconPara}>United Kingdom st 6002</p>
           </Col>
         </Row>
       </Container>
