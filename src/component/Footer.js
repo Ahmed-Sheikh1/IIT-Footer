@@ -17,26 +17,33 @@ const Footer = () => {
     <footer className={styles.footer}>
       <Container fluid>
         <Row>
-          <Col>
+          <Col lg={8}>
             <h1 className={styles.heading}>
               Let's Make Something <br />
               <span className={styles.h1Span}>Great Together !</span>
             </h1>
           </Col>
-          <Col lg={3}>
+          <Col lg={4}>
             <Form
               as="form"
-              className={`${styles.form} "text-center"`}
+              className={`${styles.form}`}
               onSubmit={emailSubmitHander}
             >
-              <Form.Group className="text-start" controlId="email">
+              <div className={styles.inputContainer}>
                 <Form.Control
                   type="email"
                   placeholder="Write Email"
                   value={email}
                   onChange={(event) => setEmail(event.target.value)}
-                ></Form.Control>
-              </Form.Group>
+                />
+                <button className={styles.arrowIconButton} type="submit">
+                  <img
+                    className={`${styles.arrowIcon} img-fluid`}
+                    src="assets/arrow.svg"
+                    alt=""
+                  ></img>
+                </button>
+              </div>
             </Form>
           </Col>
         </Row>
@@ -57,40 +64,42 @@ const Footer = () => {
               </p>
             </Row>
           </Col>
-          <Col className="mt-5" sm={6} lg={4}>
-            <h3 className={styles.serviceHeading}>Startup Solutions</h3>
-            <ListGroup className={`${styles.ul}`}>
-              <li className={`${styles.li}`}>
-                <a className={styles.a} href="example" alt="">
-                  Website Application Development
-                </a>
-              </li>
-              <li className={`${styles.li}`}>
-                <a className={styles.a} href="example" alt="">
-                  eCommerce Development
-                </a>
-              </li>
-              <li className={`${styles.li}`}>
-                <a className={styles.a} href="example" alt="">
-                  mCommerce Development
-                </a>
-              </li>
-              <li className={`${styles.li}`}>
-                <a className={styles.a} href="example" alt="">
-                  CMS Development
-                </a>
-              </li>
-              <li className={`${styles.li}`}>
-                <a className={styles.a} href="example" alt="">
-                  UI/UX Designs
-                </a>
-              </li>
-              <li className={`${styles.li}`}>
-                <a className={styles.a} href="example" alt="">
-                  Search Engine Optimization
-                </a>
-              </li>
-            </ListGroup>
+          <Col className={`${styles.midCol} mt-5`} sm={6} lg={4}>
+            <div>
+              <h3 className={styles.serviceHeading}>Startup Solutions</h3>
+              <ListGroup className={`${styles.ul}`}>
+                <li className={`${styles.li}`}>
+                  <a className={styles.a} href="example" alt="">
+                    Website Application Development
+                  </a>
+                </li>
+                <li className={`${styles.li}`}>
+                  <a className={styles.a} href="example" alt="">
+                    eCommerce Development
+                  </a>
+                </li>
+                <li className={`${styles.li}`}>
+                  <a className={styles.a} href="example" alt="">
+                    mCommerce Development
+                  </a>
+                </li>
+                <li className={`${styles.li}`}>
+                  <a className={styles.a} href="example" alt="">
+                    CMS Development
+                  </a>
+                </li>
+                <li className={`${styles.li}`}>
+                  <a className={styles.a} href="example" alt="">
+                    UI/UX Designs
+                  </a>
+                </li>
+                <li className={`${styles.li}`}>
+                  <a className={styles.a} href="example" alt="">
+                    Search Engine Optimization
+                  </a>
+                </li>
+              </ListGroup>
+            </div>
           </Col>
           <Col className="mt-5" sm={6} lg={4}>
             <h3 className={styles.serviceHeading}>Enterprise Solutions</h3>

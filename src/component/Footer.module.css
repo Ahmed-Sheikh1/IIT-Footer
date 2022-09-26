@@ -14,12 +14,16 @@
 .h1Span {
   color: #e29ae3;
 }
+.img {
+  width: 480px;
+  height: 480px;
+}
 .serviceHeading {
   font-family: "Poppins", sans-serif;
-  font-style: normal;
   font-weight: 700;
   font-size: 18px;
   line-height: 27px;
+  color: #e29ae3;
 }
 .para {
   color: white;
@@ -45,26 +49,34 @@
   padding: 13px;
   border-radius: 50%;
 }
-.serviceHeading {
-  color: #e29ae3;
-}
 .form input[type="email"] {
   background-color: #000000;
   color: #ffffff;
   border: none;
   box-shadow: none;
-  border-bottom: 1px solid white ;
 }
 .form input[type="email"]::placeholder {
   color: #ffffff;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 15px;
 }
 .form input[type="email"]:focus {
-  border: rgb(255, 255, 255);
   box-shadow: none;
-  border-bottom: 1px white solid;
+  border: none;
+}
+.arrowIconButton {
+  background-color: transparent;
+}
+.arrowIcon {
+  width: 60px;
+  height: 60px;
+}
+.inputContainer {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  width: 100%;
+  box-shadow: 0 1px rgb(255, 255, 255);
 }
 .ul {
   background-color: #000000;
@@ -86,7 +98,7 @@
   line-height: 30px;
   overflow: hidden;
 }
-a::after {
+/* a::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -101,14 +113,22 @@ a::after {
   transform: translate3d(0, 0, 0);
   width: 100%;
   height: 0.1rem;
-}
+} */
 .a:hover {
   color: rgb(255, 255, 255);
+  text-decoration: underline 1.5px #e29ae3;
+  text-underline-offset: 0.4rem;
 }
 
 @media (max-width: 1280px) {
   .footer {
     padding: 60px;
+  }
+}
+@media (min-width: 992px) {
+  .midCol {
+    display: flex;
+    justify-content: center;
   }
 }
 @media (max-width: 992px) {
@@ -125,12 +145,15 @@ a::after {
     padding: 40px;
   }
   .heading {
-    font-size: 30px;
+    font-size: 40px;
     line-height: 41px;
   }
 }
 @media (max-width: 480px) {
   .footer {
     padding: 20px;
+  }
+  .heading {
+    font-size: 30px;
   }
 }
