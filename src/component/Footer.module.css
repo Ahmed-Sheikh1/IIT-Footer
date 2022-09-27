@@ -1,7 +1,7 @@
 .footer {
   background-color: #000000;
   user-select: none;
-  padding: 100px;
+  padding: 70px;
 }
 .heading {
   font-family: "Montserrat", sans-serif;
@@ -34,13 +34,13 @@
   line-height: 21px;
   padding-right: 38px;
 }
+
 .iconPara {
   color: white;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 14px;
   padding-left: 10px;
-  padding-top: 15px;
 }
 .iconImg {
   width: 60px;
@@ -50,10 +50,13 @@
   border-radius: 50%;
 }
 .form input[type="email"] {
-  background-color: #000000;
   color: #ffffff;
+  background-color: #000000;
   border: none;
   box-shadow: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
 }
 .form input[type="email"]::placeholder {
   color: #ffffff;
@@ -69,8 +72,7 @@
   background-color: transparent;
 }
 .arrowIcon {
-  width: 60px;
-  height: 60px;
+  width: 52px;
 }
 .inputContainer {
   display: -ms-flexbox; /* IE10 */
@@ -79,11 +81,9 @@
   box-shadow: 0 1px rgb(255, 255, 255);
 }
 .ul {
-  background-color: #000000;
   margin-top: 3vh;
 }
 .li {
-  background-color: #000000;
   list-style: none;
 }
 .a {
@@ -98,7 +98,7 @@
   line-height: 30px;
   overflow: hidden;
 }
-/* a::after {
+a::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -113,18 +113,13 @@
   transform: translate3d(0, 0, 0);
   width: 100%;
   height: 0.1rem;
-} */
+}
 .a:hover {
-  color: rgb(255, 255, 255);
-  text-decoration: underline 1.5px #e29ae3;
-  text-underline-offset: 0.4rem;
+  color:  #ffffff;
+   /* text-decoration: underline 1.5px #e29ae3;
+  text-underline-offset: 0.4rem;  */
 }
 
-@media (max-width: 1280px) {
-  .footer {
-    padding: 60px;
-  }
-}
 @media (min-width: 992px) {
   .midCol {
     display: flex;
@@ -135,10 +130,6 @@
   .footer {
     padding: 50px;
   }
-  .img {
-    width: 180px;
-    height: 180px;
-  }
 }
 @media (max-width: 778px) {
   .footer {
@@ -148,12 +139,28 @@
     font-size: 40px;
     line-height: 41px;
   }
+  .iconImg {
+    width: 45px;
+    height: 45px;
+    padding: 8px;
+  }
 }
-@media (max-width: 480px) {
+@media (min-width: 576px) {
+  .iconCol {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media (max-width: 576px) {
   .footer {
     padding: 20px;
   }
   .heading {
     font-size: 30px;
+  }
+  .iconCol {
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 10px;
   }
 }
