@@ -1,0 +1,264 @@
+.root {
+  /* background-image: url("../../../public/assets/background.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%; */
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+  user-select: none;
+}
+.innerContainer {
+  padding: 75px 100px 75px 100px;
+}
+.heading {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 50px;
+  color: #ffffff;
+}
+.heading span {
+  color: #e29ae3;
+}
+.para {
+  font-family: "Poppins", sans-serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 21px;
+  color: #ffffff;
+}
+.idvReview h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+}
+.idvReview h3 span {
+  color: #e29ae3;
+  font-weight: 700;
+}
+.column {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.idvHeadingsContainer {
+  padding-left: 15px;
+}
+.reviewsBoxContainer {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.reviewsBoxInnerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.styledBox {
+  width: 180px;
+  height: 70px;
+  background-color: white;
+  border-radius: 50px 50px 0px;
+  display: flex;
+  justify-content: start;
+}
+.styledBox:hover {
+  background-color: #e0e0e0;
+}
+.styledBoxActive {
+  width: 180px;
+  height: 70px;
+  background-color: #e29ae3;
+  border-radius: 50px 50px 0px;
+  display: flex;
+  justify-content: start;
+}
+.styledBoxImg {
+  padding: 9px;
+}
+.faqImgContainer {
+  display: flex;
+  align-items: center;
+}
+.faqRootContainer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: column;
+}
+.rootFaqSec {
+  display: flex;
+  justify-content: end;
+  flex-direction: column;
+  align-items:center ;
+  width: 500px;
+}
+.faqSec {
+  display:inline-flex;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100%;
+  background-color: transparent;
+  justify-content: space-between;
+  align-items: center;
+}
+.faqSecActive {
+    display: inline-flex;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+    background-color: #ffffff;
+    justify-content: space-between;
+    align-items: center;
+  }
+.faqSec h1 {
+  font-family: "Poppins";
+  font-weight: 700;
+  font-size: 13px;
+  color: #ffffff;
+  align-self: center;
+  margin-top: 0.9vh;
+}
+.faqSecActive h1 {
+  font-family: "Poppins";
+  font-weight: 700;
+  font-size: 13px;
+  color: #7144fe;
+  align-self: center;
+  margin-top: 0.9vh;
+}
+.rootFaqSec p {
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 21px;
+  color: #ffffff;
+  padding: 10px 15px 10px 15px;
+  text-align: left;
+}
+@media (max-width: 1282px) {
+  .rootFaqSec {
+    width: 350px;
+  }
+}
+@media(max-width: 1075px){
+    .styledBox {
+        width: 150px;
+        height: 65px;
+      }
+      .styledBoxActive {
+        width: 150px;
+        height: 65px;
+      }
+}
+/* breakpoint *992px */
+@media (max-width: 992px) {
+  .innerContainer {
+    padding: 75px 75px 75px 75px;
+  }
+  .reviewsBoxContainer {
+    justify-content: center;
+    align-items: center;
+  }
+  .reviewsBoxInnerContainer {
+    margin-top: 8vh;
+  }
+  .leftStyledCol {
+    margin-right: 50px;
+  }
+  .rightStyledCol {
+    margin-left: 50px;
+  }
+  .rootFaqSec {
+    width: 100%;
+  }
+  .faqImgContainer {
+    justify-content: center;
+    align-items: center;
+  }
+  .faqRootContainer {
+    width: 100%;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (max-width: 724px) {
+  .innerContainer {
+    padding: 75px 25px 75px 25px;
+  }
+  .heading {
+    font-size: 30px;
+  }
+  .leftStyledCol {
+    margin-right: 20px;
+  }
+  .rightStyledCol {
+    margin-left: 20px;
+  }
+  .rootFaqSec p {
+    font-size: 13px;
+    line-height: 21px;
+  }
+}
+@media (max-width: 574px) {
+    .innerContainer {
+      padding: 75px 15px 75px 15px;
+    }
+    .leftStyledCol {
+      margin-right: 10px;
+    }
+    .heading {
+        font-size: 27px;
+      }
+    .rightStyledCol {
+      margin-left: 10px;
+    }
+    .styledBox {
+        width: 150px;
+        height: 65px;
+      }
+      .styledBoxActive {
+        width: 150px;
+        height: 65px;
+      }
+     
+  }
+  @media(max-width: 480px){
+    .leftStyledCol {
+        margin-right: 0px;
+      }
+      .rightStyledCol {
+        margin-left: 0px;
+      }
+      .styledBox {
+          width: 100px;
+          height: 45px;
+        }
+        .styledBoxActive {
+          width: 100px;
+          height: 45px;
+        }
+        .heading {
+            font-size: 24px;
+          }
+        .para{
+            font-size: 12px;
+          }
+          .idvReview h3 {
+            font-size: 14px;
+          }
+        
+          .faqSec h1 {
+            font-size: 13px;
+          }
+          .faqSecActive h1 {
+            font-size: 13px;
+          }
+          .rootFaqSec p {
+            font-size: 12px;
+          }
+  }

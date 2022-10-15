@@ -1,4 +1,5 @@
 import Footer from "./component/Footer";
+import PricingPlan from "./component/PricingPlan/PricingPlan";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
       <br />
       <br />
       <br />
+      <PricingPlan/>
       <br />
       <br />
       <br />
