@@ -5,13 +5,88 @@ import styles from "./PricingPlan.module.css";
 const PricingPlan = () => {
   // Single Component For better reusability
 
-  const [name, setName] = useState("John William");
-  const [review, setReview] = useState("The Review");
+  // Arrays used for easy customization
+
+  const Reviews = [
+    {
+      name: "person 1",
+      note: "p1 Great Work!",
+      imageUrl: "/assets/people1.svg",
+      message: `P1 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.`,
+    },
+    {
+      name: "person 2",
+      note: "p2 Great Work!",
+      imageUrl: "/assets/people2.svg",
+      message: `P2 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.`,
+    },
+    {
+      name: "person 3",
+      note: "p3 Great Work!",
+      imageUrl: "/assets/people3.svg",
+      message: `P3 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.`,
+    },
+    {
+      name: "person 4",
+      note: "p4 Great Work!",
+      imageUrl: "/assets/people4.svg",
+      message: `P4 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.`,
+    },
+  ];
+
+  const FaqParagraphs = [
+    {
+      question: "Q1 The Way We Work",
+      answer: "p1 Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lore Lorem",
+    },
+    {
+      question: "Q2 How to generate revenue from SEO services?",
+      answer: "p2 Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lore Lorem",
+    },
+    {
+      question: "Q3 What are the company management policies?",
+      answer: "p3 Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lore Lorem",
+    },
+    {
+      question: "Q4 Which qualifications and experience?",
+      answer: "p4 Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lore Lorem",
+    },
+  ];
+
+  const [showReview1, setShowReview1] = useState(true);
+  const [showReview2, setShowReview2] = useState(false);
+  const [showReview3, setShowReview3] = useState(false);
+  const [showReview4, setShowReview4] = useState(false);
 
   const [showPara1, setShowPara1] = useState(false);
   const [showPara2, setShowPara2] = useState(false);
   const [showPara3, setShowPara3] = useState(false);
   const [showPara4, setShowPara4] = useState(false);
+
+  const review1Handler = () => {
+    setShowReview1(true);
+    setShowReview2(false);
+    setShowReview3(false);
+    setShowReview4(false);
+  };
+  const review2Handler = () => {
+    setShowReview2(!showReview2);
+    setShowReview1(false);
+    setShowReview3(false);
+    setShowReview4(false);
+  };
+  const review3Handler = () => {
+    setShowReview3(!showReview3);
+    setShowReview1(false);
+    setShowReview2(false);
+    setShowReview4(false);
+  };
+  const review4Handler = () => {
+    setShowReview4(!showReview4);
+    setShowReview1(false);
+    setShowReview2(false);
+    setShowReview3(false);
+  };
 
   const icon1Handler = () => {
     setShowPara1(!showPara1);
@@ -26,13 +101,6 @@ const PricingPlan = () => {
     setShowPara4(!showPara4);
   };
 
-  const FaqParagraphs = [
-    { text: "p1 Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lore Lorem" },
-    { text: "p2 Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lore Lorem" },
-    { text: "p3 Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lore Lorem" },
-    { text: "p4 Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lore Lorem" },
-  ];
-
   return (
     <div className={styles.root}>
       <div className={styles.innerContainer}>
@@ -43,20 +111,70 @@ const PricingPlan = () => {
               <h1 className={styles.heading}>
                 What <span>People</span> Say
               </h1>
-              <p className={`${styles.para} mt-4`}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book.
-              </p>
+              {showReview1 ? (
+                <p className={`${styles.para} mt-4`}>{Reviews[0].message}</p>
+              ) : showReview2 ? (
+                <p className={`${styles.para} mt-4`}>{Reviews[1].message}</p>
+              ) : showReview3 ? (
+                <p className={`${styles.para} mt-4`}>{Reviews[2].message}</p>
+              ) : (
+                <p className={`${styles.para} mt-4`}>{Reviews[3].message}</p>
+              )}
               <Row className={`${styles.idvReview} mt-4`}>
                 <Col className={styles.column}>
-                  <img className="img-fluid" src="/assets/people1.svg" />
+                  {showReview1 ? (
+                    <img
+                      alt="Reviews"
+                      className="img-fluid"
+                      src={Reviews[0].imageUrl}
+                    />
+                  ) : showReview2 ? (
+                    <img
+                      alt="Reviews"
+                      className="img-fluid"
+                      src={Reviews[1].imageUrl}
+                    />
+                  ) : showReview3 ? (
+                    <img
+                      alt="Reviews"
+                      className="img-fluid"
+                      src={Reviews[2].imageUrl}
+                    />
+                  ) : (
+                    <img
+                      alt="Reviews"
+                      className="img-fluid"
+                      src={Reviews[3].imageUrl}
+                    />
+                  )}
                   <div className={styles.idvHeadingsContainer}>
-                    <h3>
-                      <span>{name}</span>
-                    </h3>
-                    <h3>{review}</h3>
+                    {showReview1 ? (
+                      <h3>
+                        <span>{Reviews[0].name}</span>
+                      </h3>
+                    ) : showReview2 ? (
+                      <h3>
+                        <span>{Reviews[1].name}</span>
+                      </h3>
+                    ) : showReview3 ? (
+                      <h3>
+                        <span>{Reviews[2].name}</span>
+                      </h3>
+                    ) : (
+                      <h3>
+                        <span>{Reviews[3].name}</span>
+                      </h3>
+                    )}
+
+                    {showReview1 ? (
+                      <h3>{Reviews[0].note}</h3>
+                    ) : showReview2 ? (
+                      <h3>{Reviews[1].note}</h3>
+                    ) : showReview3 ? (
+                      <h3>{Reviews[2].note}</h3>
+                    ) : (
+                      <h3>{Reviews[3].note}</h3>
+                    )}
                   </div>
                 </Col>
               </Row>
@@ -65,15 +183,29 @@ const PricingPlan = () => {
               <div className={styles.reviewsBoxInnerContainer}>
                 <Col className={styles.leftStyledCol}>
                   <div className="pe-5">
-                    <div className={`${styles.styledBoxActive}`}>
+                    <div
+                      onClick={review1Handler}
+                      className={
+                        showReview1 ? styles.styledBoxActive : styles.styledBox
+                      }
+                    >
                       <img
+                        alt="Reviews Insource IT"
                         className={`${styles.styledBoxImg} img-fluid`}
                         src="/assets/people1.svg"
                       />
                     </div>
                     <div className="pt-5 ">
-                      <div className={styles.styledBox}>
+                      <div
+                        onClick={review2Handler}
+                        className={
+                          showReview2
+                            ? styles.styledBoxActive
+                            : styles.styledBox
+                        }
+                      >
                         <img
+                          alt="Reviews Insource IT"
                           className={`${styles.styledBoxImg} img-fluid`}
                           src="/assets/people2.svg"
                         />
@@ -82,15 +214,27 @@ const PricingPlan = () => {
                   </div>
                 </Col>
                 <Col className={styles.rightStyledCol}>
-                  <div className={styles.styledBox}>
+                  <div
+                    onClick={review3Handler}
+                    className={
+                      showReview3 ? styles.styledBoxActive : styles.styledBox
+                    }
+                  >
                     <img
+                      alt="Reviews Insource IT"
                       className={`${styles.styledBoxImg} img-fluid`}
                       src="/assets/people3.svg"
                     />
                   </div>
                   <div className="pt-5">
-                    <div className={styles.styledBox}>
+                    <div
+                      onClick={review4Handler}
+                      className={
+                        showReview4 ? styles.styledBoxActive : styles.styledBox
+                      }
+                    >
                       <img
+                        alt="Reviews Insource IT"
                         className={`${styles.styledBoxImg} img-fluid`}
                         src="/assets/people4.svg"
                       />
@@ -107,7 +251,11 @@ const PricingPlan = () => {
             </h1>
             <div className="mt-5 row">
               <Col className={styles.faqImgContainer} lg={6}>
-                <img className="img-fluid" src="/assets/faqImg.svg" />
+                <img
+                  alt="Frequently Asked Questions, Insource IT"
+                  className="img-fluid"
+                  src="/assets/faqImg.svg"
+                />
               </Col>
               <Col
                 className="d-flex align-items-center justify-content-end"
@@ -120,8 +268,9 @@ const PricingPlan = () => {
                         showPara1 ? styles.faqSecActive : styles.faqSec
                       }
                     >
-                      <h1>The Way We Work</h1>
+                      <h1>{FaqParagraphs[0].question}</h1>
                       <img
+                        alt="FAQs"
                         onClick={icon1Handler}
                         style={{ width: "11px" }}
                         className="img-fluid"
@@ -132,7 +281,7 @@ const PricingPlan = () => {
                         }
                       />
                     </div>
-                    <div>{showPara1 && <p>{FaqParagraphs[0].text}</p>}</div>
+                    <div>{showPara1 && <p>{FaqParagraphs[0].answer}</p>}</div>
                   </div>
 
                   <div className={styles.rootFaqSec}>
@@ -141,8 +290,9 @@ const PricingPlan = () => {
                         showPara2 ? styles.faqSecActive : styles.faqSec
                       }
                     >
-                      <h1>How to generate revenue from SEO services?</h1>
+                      <h1>{FaqParagraphs[1].question}</h1>
                       <img
+                        alt="FAQs"
                         onClick={icon2Handler}
                         style={{ width: "11px" }}
                         className="img-fluid"
@@ -153,7 +303,7 @@ const PricingPlan = () => {
                         }
                       />
                     </div>
-                    <div>{showPara2 && <p>{FaqParagraphs[1].text}</p>}</div>
+                    <div>{showPara2 && <p>{FaqParagraphs[1].answer}</p>}</div>
                   </div>
 
                   <div className={styles.rootFaqSec}>
@@ -162,8 +312,9 @@ const PricingPlan = () => {
                         showPara3 ? styles.faqSecActive : styles.faqSec
                       }
                     >
-                      <h1>What are the company management policies?</h1>
+                      <h1>{FaqParagraphs[2].question}</h1>
                       <img
+                        alt="FAQs"
                         onClick={icon3Handler}
                         style={{ width: "11px" }}
                         className="img-fluid"
@@ -174,7 +325,7 @@ const PricingPlan = () => {
                         }
                       />
                     </div>
-                    <div>{showPara3 && <p>{FaqParagraphs[2].text}</p>}</div>
+                    <div>{showPara3 && <p>{FaqParagraphs[2].answer}</p>}</div>
                   </div>
 
                   <div className={styles.rootFaqSec}>
@@ -183,8 +334,9 @@ const PricingPlan = () => {
                         showPara4 ? styles.faqSecActive : styles.faqSec
                       }
                     >
-                      <h1>Which qualifications and experience?</h1>
+                      <h1>{FaqParagraphs[3].question}</h1>
                       <img
+                        alt="FAQs"
                         onClick={icon4Handler}
                         style={{ width: "11px" }}
                         className="img-fluid"
@@ -195,7 +347,7 @@ const PricingPlan = () => {
                         }
                       />
                     </div>
-                    <div>{showPara4 && <p>{FaqParagraphs[3].text}</p>}</div>
+                    <div>{showPara4 && <p>{FaqParagraphs[3].answer}</p>}</div>
                   </div>
                 </div>
               </Col>
