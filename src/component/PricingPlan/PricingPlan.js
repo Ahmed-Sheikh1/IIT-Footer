@@ -36,19 +36,19 @@ const PricingPlan = () => {
 
   const FaqParagraphs = [
     {
-      question: "Q1 The Way We Work",
+      question: "The Way We Work",
       answer: "p1 Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lore Lorem",
     },
     {
-      question: "Q2 How to generate revenue from SEO services?",
+      question: "How to generate revenue from SEO services?",
       answer: "p2 Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lore Lorem",
     },
     {
-      question: "Q3 What are the company management policies?",
+      question: "What are the company management policies?",
       answer: "p3 Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lore Lorem",
     },
     {
-      question: "Q4 Which qualifications and experience?",
+      question: "Which qualifications and experience?",
       answer: "p4 Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lore Lorem",
     },
   ];
@@ -124,24 +124,28 @@ const PricingPlan = () => {
                 <Col className={styles.column}>
                   {showReview1 ? (
                     <img
+                      style={{width:'90px', height: '90px'}}
                       alt="Reviews"
                       className="img-fluid"
                       src={Reviews[0].imageUrl}
                     />
                   ) : showReview2 ? (
                     <img
+                      style={{width:'90px', height: '90px'}}
                       alt="Reviews"
                       className="img-fluid"
                       src={Reviews[1].imageUrl}
                     />
                   ) : showReview3 ? (
                     <img
+                      style={{width:'90px', height: '90px'}}
                       alt="Reviews"
                       className="img-fluid"
                       src={Reviews[2].imageUrl}
                     />
                   ) : (
                     <img
+                      style={{width:'90px', height: '90px'}}
                       alt="Reviews"
                       className="img-fluid"
                       src={Reviews[3].imageUrl}
@@ -262,7 +266,7 @@ const PricingPlan = () => {
                 lg={6}
               >
                 <div className={styles.faqRootContainer}>
-                  <div className={styles.rootFaqSec}>
+                  <div onClick={icon1Handler} className={styles.rootFaqSec}>
                     <div
                       className={
                         showPara1 ? styles.faqSecActive : styles.faqSec
@@ -271,7 +275,6 @@ const PricingPlan = () => {
                       <h1>{FaqParagraphs[0].question}</h1>
                       <img
                         alt="FAQs"
-                        onClick={icon1Handler}
                         style={{ width: "11px" }}
                         className="img-fluid"
                         src={
@@ -284,7 +287,7 @@ const PricingPlan = () => {
                     <div>{showPara1 && <p>{FaqParagraphs[0].answer}</p>}</div>
                   </div>
 
-                  <div className={styles.rootFaqSec}>
+                  <div onClick={icon2Handler} className={styles.rootFaqSec}>
                     <div
                       className={
                         showPara2 ? styles.faqSecActive : styles.faqSec
@@ -293,7 +296,6 @@ const PricingPlan = () => {
                       <h1>{FaqParagraphs[1].question}</h1>
                       <img
                         alt="FAQs"
-                        onClick={icon2Handler}
                         style={{ width: "11px" }}
                         className="img-fluid"
                         src={
@@ -306,7 +308,7 @@ const PricingPlan = () => {
                     <div>{showPara2 && <p>{FaqParagraphs[1].answer}</p>}</div>
                   </div>
 
-                  <div className={styles.rootFaqSec}>
+                  <div onClick={icon3Handler} className={styles.rootFaqSec}>
                     <div
                       className={
                         showPara3 ? styles.faqSecActive : styles.faqSec
@@ -315,7 +317,6 @@ const PricingPlan = () => {
                       <h1>{FaqParagraphs[2].question}</h1>
                       <img
                         alt="FAQs"
-                        onClick={icon3Handler}
                         style={{ width: "11px" }}
                         className="img-fluid"
                         src={
@@ -328,7 +329,7 @@ const PricingPlan = () => {
                     <div>{showPara3 && <p>{FaqParagraphs[2].answer}</p>}</div>
                   </div>
 
-                  <div className={styles.rootFaqSec}>
+                  <div onClick={icon4Handler} className={styles.rootFaqSec}>
                     <div
                       className={
                         showPara4 ? styles.faqSecActive : styles.faqSec
@@ -337,7 +338,6 @@ const PricingPlan = () => {
                       <h1>{FaqParagraphs[3].question}</h1>
                       <img
                         alt="FAQs"
-                        onClick={icon4Handler}
                         style={{ width: "11px" }}
                         className="img-fluid"
                         src={

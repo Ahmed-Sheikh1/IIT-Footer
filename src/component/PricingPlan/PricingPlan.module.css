@@ -94,7 +94,8 @@
   justify-content: end;
   flex-direction: column;
   align-items:center ;
-  width: 500px;
+  width: 550px;
+  cursor: pointer;
 }
 .faqSec {
   display:inline-flex;
@@ -117,7 +118,7 @@
 .faqSec h1 {
   font-family: "Poppins";
   font-weight: 700;
-  font-size: 13px;
+  font-size: 16px;
   color: #ffffff;
   align-self: center;
   margin-top: 0.9vh;
@@ -125,7 +126,7 @@
 .faqSecActive h1 {
   font-family: "Poppins";
   font-weight: 700;
-  font-size: 13px;
+  font-size: 16px;
   color: #7144fe;
   align-self: center;
   margin-top: 0.9vh;
@@ -133,17 +134,27 @@
 .rootFaqSec p {
   font-family: "Poppins";
   font-weight: 400;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 21px;
   color: #ffffff;
   padding: 10px 15px 10px 15px;
   text-align: left;
 }
-@media (max-width: 1282px) {
+@media (max-width: 1382px) {
+    .rootFaqSec {
+      width: 500px;
+    }
+  }
+@media (max-width: 1300px) {
   .rootFaqSec {
-    width: 350px;
+    width: 420px;
   }
 }
+@media (max-width: 1192px) {
+    .rootFaqSec {
+      width: 360px;
+    }
+  }
 @media(max-width: 1075px){
     .styledBox {
         width: 150px;
