@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import styles from "./PricingPlan.module.css";
+import styles from "./FaqSec.module.css";
 
-const PricingPlan = () => {
+const FaqSec = () => {
   // Single Component For better reusability
 
   // Arrays used for easy customization
@@ -359,4 +359,4 @@ const PricingPlan = () => {
   );
 };
 
-export default PricingPlan;
+export default FaqSec;

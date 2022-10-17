@@ -1,0 +1,291 @@
+.root {
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  user-select: none;
+}
+.innerContainer {
+  padding: 75px 50px 75px 50px;
+}
+.heading {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 50px;
+  line-height: 61px;
+  color: #000000;
+}
+.columnsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+}
+.col1 {
+  margin-top: 200px;
+}
+.col2 {
+  margin-top: 0px;
+}
+.col3 {
+  margin-top: -200px;
+}
+.innerColumn {
+  width: 100%;
+  border-radius: 6px;
+  background-color: rgb(255, 255, 255);
+  padding: 40px 30px 40px 30px;
+  box-shadow: 0px 1px 46px -16px rgba(0, 0, 0, 0.38);
+  background-color: #ffffff;
+}
+.columnsContainer .img {
+  width: 65px;
+  height: 65px;
+  padding: 8px;
+  color: white;
+  background-color: #e29ae3;
+}
+.innerColumn .svg {
+  width: 65px;
+  height: 65px;
+  padding: 8px;
+  background-color: #e29ae3;
+}
+.columnsContainer .dollarImg {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+}
+.columnsContainer h1 {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 50px;
+  color: #7443ff;
+}
+.columnsContainer h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
+  color: #7443ff;
+}
+.columnsContainer h1 span {
+  font-size: 16px;
+}
+.innerColumnActive {
+  width: 100%;
+  border-radius: 6px;
+  background-color: rgb(255, 255, 255);
+  padding: 40px 30px 40px 30px;
+  box-shadow: 0px 1px 46px -16px rgba(0, 0, 0, 0.38);
+  background-color: #7443ff;
+}
+.innerColumnActive .img {
+  background-color: white;
+}
+.innerColumnActive h1 {
+  color: #ffffff;
+}
+.innerColumnActive h1 span {
+  font-size: 16px;
+}
+.innerColumnActive h3 {
+  color: #e29ae3;
+}
+.scrollableCard {
+  max-height: 160px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  position: relative;
+  width: 100%;
+}
+.scrollableCardActive {
+  max-height: 160px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  position: relative;
+  width: 100%;
+}
+.scrollableCard::-webkit-scrollbar {
+  width: 7px;
+}
+/* Track */
+.scrollableCard::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+/* Handle */
+.scrollableCard::-webkit-scrollbar-thumb {
+  background: #875cff;
+}
+/* Handle on hover */
+.scrollableCard::-webkit-scrollbar-thumb:hover {
+  background: #7443ff;
+}
+.scrollableCardActive::-webkit-scrollbar {
+  width: 7px;
+}
+/* Track */
+.scrollableCardActive::-webkit-scrollbar-track {
+  background: #a588f4;
+}
+/* Handle */
+.scrollableCardActive::-webkit-scrollbar-thumb {
+  background: #ffffff;
+}
+/* Handle on hover */
+.scrollableCardActive::-webkit-scrollbar-thumb:hover {
+  background: #eee8ff;
+}
+.columnsContainer ul {
+  padding: 0px;
+  text-align: left;
+  list-style: none;
+}
+.columnsContainer li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 30px;
+}
+.columnsContainer li h4 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #6f6f6f;
+  margin-top: 1.4vh;
+  margin: 0px;
+  margin-left: 8px;
+  text-align: left;
+}
+.columnsContainer li img {
+  background-color: #7443ff;
+  width: 18px;
+  height: 18px;
+  padding: 3px;
+  border-radius: 50%;
+}
+.scrollableCardActive li h4 {
+  color: #ffffff;
+}
+.scrollableCardActive li img {
+  background-color: #ffffff;
+  color: #7443ff;
+}
+.column button {
+  background-color: #e29ae3;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 24px;
+  text-align: center;
+  color: #ffffff;
+  border: transparent;
+  padding: 12px;
+  margin-top: 20px;
+}
+.column button:hover {
+  background-color: #e070e2;
+}
+@media (max-width: 1174px) {
+  .innerContainer {
+    padding: 50px 0px 50px 0px;
+  }
+  .columnsContainer {
+    padding: 50px 0px 50px 0px;
+  }
+}
+/* Break Point 992px */
+@media (max-width: 992px) {
+  .heading {
+    font-size: 45px;
+    line-height: 38px;
+  }
+  .columnsContainer {
+    padding: 10px 100px 10px 100px;
+  }
+  .columnsContainer {
+    flex-direction: column;
+  }
+  .col1 {
+    margin-top: 0px;
+  }
+  .col2 {
+    margin-top: 0px;
+  }
+  .col3 {
+    margin-top: 0px;
+  }
+}
+@media (max-width: 792px) {
+  .innerContainer {
+    padding: 50px 10px 50px 10px;
+  }
+  .columnsContainer {
+    padding: 10px 20px 10px 20px;
+  }
+}
+@media (max-width: 564px) {
+  .heading {
+    font-size: 28px;
+    line-height: 28px;
+  }
+  .columnsContainer .img {
+    width: 45px;
+    height: 45px;
+  }
+  .innerColumn .svg {
+    width: 45px;
+    height: 45px;
+  }
+  .columnsContainer .dollarImg {
+    width: 14px;
+    height: 14px;
+  }
+  .columnsContainer h3 {
+    font-size: 16px;
+    line-height: 27px;
+  }
+  .columnsContainer h1 {
+    font-size: 28px;
+  }
+  .columnsContainer h1 span {
+    font-size: 12px;
+  }
+  .column button {
+    font-size: 13px;
+  }
+  .innerContainer {
+    padding: 25px 0px 25px 0px;
+  }
+  .columnsContainer {
+    padding: 10px 0px 10px 0px;
+  }
+  .columnsContainer li h4 {
+    font-size: 12px;
+  }
+  .columnsContainer li img {
+    width: 14px;
+    height: 14px;
+  }
+}
+@media (max-width: 480px) {
+  .heading {
+    font-size: 24px;
+    line-height: 22px;
+  }
+  .columnsContainer {
+    padding: 0px 0px 0px 0px;
+  }
+}
