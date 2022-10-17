@@ -211,6 +211,7 @@
   .heading {
     font-size: 45px;
     line-height: 38px;
+    text-align: center;
   }
   .columnsContainer {
     padding: 10px 100px 10px 100px;
@@ -229,6 +230,9 @@
   }
 }
 @media (max-width: 792px) {
+  .heading {
+    font-size: 35px;
+  }
   .innerContainer {
     padding: 50px 10px 50px 10px;
   }
@@ -282,10 +286,14 @@
 }
 @media (max-width: 480px) {
   .heading {
-    font-size: 24px;
-    line-height: 22px;
+    line-height: 26px;
   }
   .columnsContainer {
     padding: 0px 0px 0px 0px;
+  }
+}
+@media (max-width: 400px) {
+  .heading {
+    font-size: 23px;
   }
 }

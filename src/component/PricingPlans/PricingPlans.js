@@ -6,7 +6,7 @@ const PricingPlans = () => {
   return (
     <div className={styles.root}>
       <div className={styles.innerContainer}>
-        <Container fluid>
+        <Container>
           {/* Place dashed text here <-- */}
           <h1 className={`${styles.heading} pb-2`}>
             Choose Plan That Suits<br></br> For Your Business
@@ -15,11 +15,16 @@ const PricingPlans = () => {
             <Col lg={4} className={`${styles.column} ${styles.col1}`}>
               <div className={styles.innerColumn}>
                 <img
+                  alt=""
                   className={`${styles.img} img-fluid`}
                   src="/assets/dollarSign.svg"
                 />
                 <div className="d-flex flex-row align-items-start justify-content-start mt-4">
-                  <img className={styles.dollarImg} src="/assets/dollar.svg" />
+                  <img
+                    alt=""
+                    className={styles.dollarImg}
+                    src="/assets/dollar.svg"
+                  />
                   <h1>
                     29<span>/Month</span>
                   </h1>
@@ -28,31 +33,31 @@ const PricingPlans = () => {
                 <div className={styles.scrollableCard}>
                   <ul>
                     <li>
-                      <img src="/assets/rightArrow.svg" />
+                      <img alt="" src="/assets/rightArrow.svg" />
                       <h4>Support</h4>
                     </li>
                     <li>
-                      <img src="/assets/rightArrow.svg" />
+                      <img alt="" src="/assets/rightArrow.svg" />
                       <h4>Custom Design And Features dededwede</h4>
                     </li>
                     <li>
-                      <img src="/assets/rightArrow.svg" />
+                      <img alt="" src="/assets/rightArrow.svg" />
                       <h4>Custom Design And Features</h4>
                     </li>
                     <li>
-                      <img src="/assets/rightArrow.svg" />
+                      <img alt="" src="/assets/rightArrow.svg" />
                       <h4>Custom Design And Features</h4>
                     </li>
                     <li>
-                      <img src="/assets/rightArrow.svg" />
+                      <img alt="" src="/assets/rightArrow.svg" />
                       <h4>Custom Design And Features</h4>
                     </li>
                     <li>
-                      <img src="/assets/rightArrow.svg" />
+                      <img alt="" src="/assets/rightArrow.svg" />
                       <h4>Custom Design And Features</h4>
                     </li>
                     <li>
-                      <img src="/assets/rightArrow.svg" />
+                      <img alt="" src="/assets/rightArrow.svg" />
                       <h4>Custom Design And Features</h4>
                     </li>
                   </ul>
@@ -65,6 +70,7 @@ const PricingPlans = () => {
             <Col lg={4} className={`${styles.column} ${styles.col2}`}>
               <div className={styles.innerColumnActive}>
                 <img
+                  alt=""
                   className={`${styles.img} img-fluid`}
                   src="/assets/star.svg"
                 />
@@ -91,32 +97,32 @@ const PricingPlans = () => {
                 <div className={styles.scrollableCardActive}>
                   <ul>
                     <li>
-                      <img src="/assets/rightArrowPurple.svg" />
+                      <img alt="" src="/assets/rightArrowPurple.svg" />
                       <h4>Support </h4>
                     </li>
                     <li>
-                      <img src="/assets/rightArrowPurple.svg" />
+                      <img alt="" src="/assets/rightArrowPurple.svg" />
                       <h4>Custom Design And Features dededwede</h4>
                     </li>
                     <li>
-                      <img src="/assets/rightArrowPurple.svg" />
+                      <img alt="" src="/assets/rightArrowPurple.svg" />
                       <h4>Custom Design And Features</h4>
                     </li>
                     <li>
-                      <img src="/assets/rightArrowPurple.svg" />
+                      <img alt="" src="/assets/rightArrowPurple.svg" />
                       <h4>Custom Design And Features</h4>
                     </li>
                     <li>
-                      <img src="/assets/rightArrowPurple.svg" />
+                      <img alt="" src="/assets/rightArrowPurple.svg" />
 
                       <h4>Custom Design And Features</h4>
                     </li>
                     <li>
-                      <img src="/assets/rightArrowPurple.svg" />
+                      <img alt="" src="/assets/rightArrowPurple.svg" />
                       <h4>Custom Design And Features</h4>
                     </li>
                     <li>
-                      <img src="/assets/rightArrowPurple.svg" />
+                      <img alt="" src="/assets/rightArrowPurple.svg" />
                       <h4>Custom Design And Features</h4>
                     </li>
                   </ul>
@@ -177,7 +183,11 @@ const PricingPlans = () => {
                   </defs>
                 </svg>
                 <div className="d-flex flex-row align-items-start justify-content-start mt-4">
-                  <img className={styles.dollarImg} src="/assets/dollar.svg" />
+                  <img
+                    alt=""
+                    className={styles.dollarImg}
+                    src="/assets/dollar.svg"
+                  />
                   <h1>
                     99<span>/Month</span>
                   </h1>
@@ -186,34 +196,34 @@ const PricingPlans = () => {
                 <div className={styles.scrollableCard}>
                   <ul>
                     <li>
-                      <img src="/assets/rightArrow.svg" />
+                      <img alt="" src="/assets/rightArrow.svg" />
                       <h4>Support </h4>
                     </li>
                     <li>
-                      <img src="/assets/rightArrow.svg" />
+                      <img alt="" src="/assets/rightArrow.svg" />
                       <h4>
                         Custom Design And Features dededwedewdwedwedwedwede
                         wdwed
                       </h4>
                     </li>
                     <li>
-                      <img src="/assets/rightArrow.svg" />
+                      <img alt="" src="/assets/rightArrow.svg" />
                       <h4>Custom Design And Features</h4>
                     </li>
                     <li>
-                      <img src="/assets/rightArrow.svg" />
+                      <img alt="" src="/assets/rightArrow.svg" />
                       <h4>Custom Design And Features</h4>
                     </li>
                     <li>
-                      <img src="/assets/rightArrow.svg" />
+                      <img alt="" src="/assets/rightArrow.svg" />
                       <h4>Custom Design And Features</h4>
                     </li>
                     <li>
-                      <img src="/assets/rightArrow.svg" />
+                      <img alt="" src="/assets/rightArrow.svg" />
                       <h4>Custom Design And Features</h4>
                     </li>
                     <li>
-                      <img src="/assets/rightArrow.svg" />
+                      <img alt="" src="/assets/rightArrow.svg" />
                       <h4>Custom Design And Features</h4>
                     </li>
                   </ul>
