@@ -1,6 +1,7 @@
 import Footer from "./component/Footer";
 import FaqSec from "./component/FAQs/FaqSec";
 import PricingPlans from "./component/PricingPlans/PricingPlans";
+import Services from "./component/Services/Services";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <br />
       <br />
       <br />
+      <Services />
       <br />
       <br />
       <br />
@@ -30,7 +32,7 @@ function App() {
       <br />
       <br />
       <br />
-      <FaqSec/>
+      <FaqSec />
       <br />
       <br />
       <br />
