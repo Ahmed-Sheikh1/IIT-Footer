@@ -41,12 +41,12 @@ const Services = () => {
                 </div>
                 <h3>Website Application Development</h3>
                 <p>
-                  We can provide specialised solutions targeted at our client's
-                  business objectives by following a unique professional web
-                  approach. The whole spectrum of services is offered by
-                  Insource IT, a full-cycle website-building firm that offers
-                  end-to-end solutions. Utilise our extensive experience in
-                  website building to carve out your niche on the internet.
+                  We provide specialised solutions targeted at our client's
+                  business objectives by following a professional approach. The
+                  whole spectrum of services is offered by Insource IT, a
+                  full-cycle website-building firm that offers end-to-end
+                  solutions. Utilise our extensive experience in website
+                  building to carve out your niche on the internet.
                 </p>
               </Col>
               <Col lg={4} className={styles.boxContainer}>
@@ -59,13 +59,12 @@ const Services = () => {
                 </div>
                 <h3>Mobile Application Development</h3>
                 <p>
-                  With Insource IT as your mobile development partner, you can
-                  maximise the potential of mobile applications. As a mobile app
-                  development business, we bring the most innovative ideas to
-                  life by producing user-friendly, adaptable, and custom mobile
-                  applications that expand to meet your company's demands and
-                  are an excellent replacement for corporate and customer-facing
-                  settings.
+                  Insource IT helps maximizing the potential of mobile
+                  applications. Being a mobile application development firm, we
+                  bring the most innovative ideas to life by producing
+                  user-friendly, adaptable, and custom mobile applications that
+                  expand to meet your company's demands and are an excellent
+                  replacement for corporate and customer-facing settings.
                 </p>
               </Col>
               <Col lg={4} className={styles.boxContainer}>
@@ -83,7 +82,7 @@ const Services = () => {
                   chatbot to open carts or deal with complex coding on the
                   backend. We are with our team of experts to facilitate you at
                   each stage of creating an online store or marketplace. Our
-                  experts provide the perfect, custom eCommerce solution,
+                  experts provide the perfect, custom eCommerce solutions,
                   wordpress WoCommerce solutions, OpenCart Development, Magento
                   eCommerce Development, and Shopify eCommerce setup.
                 </p>
@@ -135,12 +134,12 @@ const Services = () => {
                 </div>
                 <h3>Search Engine Optimization</h3>
                 <p>
-                  We can provide specialised solutions targeted at our client's
-                  business objectives by following a unique professional web
-                  approach. The whole spectrum of services is offered by
-                  Insource IT, a full-cycle website-building firm that offers
-                  end-to-end solutions. Utilise our extensive experience in
-                  website building to carve out your niche on the internet.
+                  Worried about why all your marketing techniques and strategies
+                  are not showing results? Looking for growth of your website?
+                  Want to generate traffic? So here now, you are at the right
+                  place. Our SEO services unlock your brand's ultimate
+                  potential. Our SEO experts will develop a strategy for your
+                  website using their expertise to rank your website.
                 </p>
               </Col>
               <div className="d-flex align-items-center justify-content-center">
@@ -154,8 +153,8 @@ const Services = () => {
                   </div>
                   <h3>UI/UX Designs</h3>
                   <p>
-                    Utilize our extensive UI/UX design knowledge to increase
-                    your technology solutions' aesthetic appeal and user
+                    Utilize our extensive UI/UX design knowledge to enhance
+                    your demonstration, aesthetic appeal and user
                     experience. We actively employ the most remarkable design
                     techniques to give our clients a chance to deliver their
                     services in a user-friendly, aesthetically pleasing
@@ -203,7 +202,7 @@ const Services = () => {
                   company doesn't need to be significant to gain from this.
                   Every company requires a CRM system that intelligently links
                   all pertinent data and presents it to salespeople, marketers,
-                  field service personnel, and customer care representatives.CRM
+                  field service personnel, and customer care representatives. CRM
                   Banking Catalyst expands the potential for intelligent,
                   customised service using Microsoft Dynamics 365 Customer
                   Insights.
