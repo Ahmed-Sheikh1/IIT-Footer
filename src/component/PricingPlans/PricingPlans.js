@@ -1,8 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Col } from "react-bootstrap";
 import styles from "./PricingPlans.module.css";
 
 const PricingPlans = () => {
+  const [toggleIdTarget, setToggleIdTarget] = useState(null);
+  const [data, setData] = useState([
+    {
+      price: 29,
+      points: ["This is P1", "This is P2", "This is P3"],
+    },
+    {
+      price: 49,
+      points: ["This is P1", "This is P2", "This is P3"],
+    },
+    {
+      price: 99,
+      points: ["This is P1", "This is P2", "This is P3"],
+    },
+  ]);
+
+  const ToggleState = (data) => {
+    setToggleIdTarget(data);
+    console.log(data);
+  };
+  // const changeData = (data) => {
+  //   setData(data);
+  //   console.log(data);
+  // };
   return (
     <div className={styles.root}>
       <div className={styles.innerContainer}>
@@ -11,6 +35,132 @@ const PricingPlans = () => {
           <h1 className={`${styles.heading} pb-2`}>
             Choose Plan That Suits<br></br> For Your Business
           </h1>
+          <div className="mt-5">
+            <Col className={styles.barCol}>
+              <h3
+                onClick={() => {
+                  ToggleState("one");
+                }}
+                className={
+                  toggleIdTarget === "one" ? styles.h3Active : styles.h3
+                }
+              >
+                Website Application
+              </h3>
+
+              <h3
+                onClick={() => {
+                  ToggleState("two");
+                }}
+                className={
+                  toggleIdTarget === "two" ? styles.h3Active : styles.h3
+                }
+              >
+                Mobile Application
+              </h3>
+
+              <h3
+                onClick={() => {
+                  ToggleState("three");
+                }}
+                className={
+                  toggleIdTarget === "three" ? styles.h3Active : styles.h3
+                }
+              >
+                Ecommerce
+              </h3>
+
+              <h3
+                onClick={() => {
+                  ToggleState("four");
+                }}
+                className={
+                  toggleIdTarget === "four" ? styles.h3Active : styles.h3
+                }
+              >
+                Mcommerce
+              </h3>
+
+              <h3
+                onClick={() => {
+                  ToggleState("five");
+                }}
+                className={
+                  toggleIdTarget === "five" ? styles.h3Active : styles.h3
+                }
+              >
+                CMS
+              </h3>
+
+              <h3
+                onClick={() => {
+                  ToggleState("six");
+                }}
+                className={
+                  toggleIdTarget === "six" ? styles.h3Active : styles.h3
+                }
+              >
+                Search Engine Optimization
+              </h3>
+
+              <h3
+                onClick={() => {
+                  ToggleState("seven");
+                }}
+                className={
+                  toggleIdTarget === "seven" ? styles.h3Active : styles.h3
+                }
+              >
+                UI UX Design
+              </h3>
+
+              <h3
+                onClick={() => {
+                  ToggleState("eight");
+                }}
+                className={
+                  toggleIdTarget === "eight" ? styles.h3Active : styles.h3
+                }
+              >
+                SaaS-Based Solutions
+              </h3>
+
+              <h3
+                onClick={() => {
+                  ToggleState("nine");
+                }}
+                className={
+                  toggleIdTarget === "nine" ? styles.h3Active : styles.h3
+                }
+              >
+                CRM Solutions
+              </h3>
+
+              <h3
+                onClick={() => {
+                  ToggleState("ten");
+                
+                }}
+                className={
+                  toggleIdTarget === "ten" ? styles.h3Active : styles.h3
+                }
+              >
+                MVP Solutions
+              </h3>
+
+              <h3
+                onClick={() => {
+                  ToggleState("eleven");
+                 
+                }}
+                className={
+                  toggleIdTarget === "eleven" ? styles.h3Active : styles.h3
+                }
+              >
+                Eprocurement Solutions
+              </h3>
+            </Col>
+          </div>
           <div className={styles.columnsContainer}>
             <Col lg={4} className={`${styles.column} ${styles.col1}`}>
               <div className={styles.innerColumn}>
@@ -26,40 +176,19 @@ const PricingPlans = () => {
                     src="/assets/dollar.svg"
                   />
                   <h1>
-                    29<span>/Month</span>
+                    {data[0].price}
+                    <span>/Month</span>
                   </h1>
                 </div>
                 <h3>Classic Plan</h3>
                 <div className={styles.scrollableCard}>
                   <ul>
-                    <li>
-                      <img alt="" src="/assets/rightArrow.svg" />
-                      <h4>Support</h4>
-                    </li>
-                    <li>
-                      <img alt="" src="/assets/rightArrow.svg" />
-                      <h4>Custom Design And Features dededwede</h4>
-                    </li>
-                    <li>
-                      <img alt="" src="/assets/rightArrow.svg" />
-                      <h4>Custom Design And Features</h4>
-                    </li>
-                    <li>
-                      <img alt="" src="/assets/rightArrow.svg" />
-                      <h4>Custom Design And Features</h4>
-                    </li>
-                    <li>
-                      <img alt="" src="/assets/rightArrow.svg" />
-                      <h4>Custom Design And Features</h4>
-                    </li>
-                    <li>
-                      <img alt="" src="/assets/rightArrow.svg" />
-                      <h4>Custom Design And Features</h4>
-                    </li>
-                    <li>
-                      <img alt="" src="/assets/rightArrow.svg" />
-                      <h4>Custom Design And Features</h4>
-                    </li>
+                    {data[0].points.map((point) => (
+                      <li>
+                        <img alt="" src="/assets/rightArrow.svg" />
+                        <h4>{point}</h4>
+                      </li>
+                    ))}
                   </ul>
                 </div>
                 <a href="tel:+21 334341 22">
@@ -88,43 +217,20 @@ const PricingPlans = () => {
                       fill="white"
                     />
                   </svg>
-
                   <h1>
-                    49<span>/Month</span>
+                    {data[1].price}
+                    <span>/Month</span>
                   </h1>
                 </div>
                 <h3>Advanced Plan</h3>
                 <div className={styles.scrollableCardActive}>
                   <ul>
-                    <li>
-                      <img alt="" src="/assets/rightArrowPurple.svg" />
-                      <h4>Support </h4>
-                    </li>
-                    <li>
-                      <img alt="" src="/assets/rightArrowPurple.svg" />
-                      <h4>Custom Design And Features dededwede</h4>
-                    </li>
-                    <li>
-                      <img alt="" src="/assets/rightArrowPurple.svg" />
-                      <h4>Custom Design And Features</h4>
-                    </li>
-                    <li>
-                      <img alt="" src="/assets/rightArrowPurple.svg" />
-                      <h4>Custom Design And Features</h4>
-                    </li>
-                    <li>
-                      <img alt="" src="/assets/rightArrowPurple.svg" />
-
-                      <h4>Custom Design And Features</h4>
-                    </li>
-                    <li>
-                      <img alt="" src="/assets/rightArrowPurple.svg" />
-                      <h4>Custom Design And Features</h4>
-                    </li>
-                    <li>
-                      <img alt="" src="/assets/rightArrowPurple.svg" />
-                      <h4>Custom Design And Features</h4>
-                    </li>
+                    {data[1].points.map((point) => (
+                      <li>
+                        <img alt="" src="/assets/rightArrowPurple.svg" />
+                        <h4>{point}</h4>
+                      </li>
+                    ))}
                   </ul>
                 </div>
                 <a href="tel: +21 334341 22">
@@ -189,43 +295,19 @@ const PricingPlans = () => {
                     src="/assets/dollar.svg"
                   />
                   <h1>
-                    99<span>/Month</span>
+                    {data[2].price}
+                    <span>/Month</span>
                   </h1>
                 </div>
                 <h3>Premium Plan</h3>
                 <div className={styles.scrollableCard}>
                   <ul>
-                    <li>
-                      <img alt="" src="/assets/rightArrow.svg" />
-                      <h4>Support </h4>
-                    </li>
-                    <li>
-                      <img alt="" src="/assets/rightArrow.svg" />
-                      <h4>
-                        Custom Design And Features dededwedewdwedwedwedwede
-                        wdwed
-                      </h4>
-                    </li>
-                    <li>
-                      <img alt="" src="/assets/rightArrow.svg" />
-                      <h4>Custom Design And Features</h4>
-                    </li>
-                    <li>
-                      <img alt="" src="/assets/rightArrow.svg" />
-                      <h4>Custom Design And Features</h4>
-                    </li>
-                    <li>
-                      <img alt="" src="/assets/rightArrow.svg" />
-                      <h4>Custom Design And Features</h4>
-                    </li>
-                    <li>
-                      <img alt="" src="/assets/rightArrow.svg" />
-                      <h4>Custom Design And Features</h4>
-                    </li>
-                    <li>
-                      <img alt="" src="/assets/rightArrow.svg" />
-                      <h4>Custom Design And Features</h4>
-                    </li>
+                    {data[0].points.map((point) => (
+                      <li>
+                        <img alt="" src="/assets/rightArrow.svg" />
+                        <h4>{point}</h4>
+                      </li>
+                    ))}
                   </ul>
                 </div>
                 <a href="tel: +21 334341 22">
